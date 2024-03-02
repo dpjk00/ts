@@ -3,6 +3,23 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+let count_id: number = 0
+
+class Project {
+  id: number = 0
+  name: string = ""
+  description: string = ""
+}
+
+const projects = []
+const project: Project = {
+  id: count_id += 1,
+  name: 'Projekt TS',
+  description: 'to jest projekt ts',
+};
+
+projects.push(project)
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -28,6 +45,11 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div>
+       <input type="text" name="name" />
+       <textarea name="description" id=""></textarea>
+       <button>Add Project</button>
+      </div>
     </>
   )
 }
