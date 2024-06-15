@@ -14,8 +14,6 @@ function App() {
   const projectService = new ProjectCreator();
   const accountManager = new AccountManager();
 
-  // test 
-
   useEffect(() => {
     const storedProjects = projectService.getAllProjects();
     setProjects(storedProjects);
